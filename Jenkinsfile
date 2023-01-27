@@ -9,7 +9,7 @@ pipeline {
     stages {
            stage('connexion'){      
            steps {
-                git branch: 'staging', credentialsId: 'SSH', url: 'git@github.com:cedrickab/RESTful-ml-endpoint.git'
+                git branch: 'main', credentialsId: 'SSH', url: 'git@github.com:cedrickab/RESTful-ml-endpoint.git'
                   }
                 }
                   
