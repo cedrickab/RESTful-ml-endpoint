@@ -16,7 +16,7 @@ pipeline {
         stage('Testing') {
             steps {
                 bat 'python -m pip install Flask'
-                bat 'python flask.py'
+                bat 'python Test.py'
             }
         }
         stage('building and running image') {
