@@ -1,7 +1,6 @@
 /* Requires the Docker Pipeline plugin , blue ocean & ssh agent and git*/
 pipeline {
-    //agent any
-    agent {docker { image '3.10.9-buster' }}
+    agent any
     environment {
         PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python37-32;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin"
         }
@@ -17,6 +16,8 @@ pipeline {
             steps {
                 bat 'python -m pip install Flask'
                 bat 'python -m pip install numpy'
+                bat 'python -m pip install pandas'
+                bat 'python -m pip install scikit-learn'
                 bat 'python app.py'
                 bat 'python Test.py'
             }
