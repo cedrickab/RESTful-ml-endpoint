@@ -4,8 +4,9 @@ Created on Tue Jan 24 16:00:25 2023
 
 @author: hp
 """
-
-from flask import Flask, request, jsonify
+from flask import Flask
+from flask import request
+from flask.json import jsonify
 import numpy as np
 import joblib
 
