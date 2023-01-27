@@ -17,4 +17,5 @@ COPY . .
 RUN python -m unittest
 
 # Run the application
-CMD ["python", "flask.py"]
+EXPOSE 5000
+CMD [ "flask", "run","--host","127.0.0.1","--port","5000"]
