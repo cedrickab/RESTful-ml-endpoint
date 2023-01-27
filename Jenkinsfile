@@ -1,7 +1,7 @@
 /* Requires the Docker Pipeline plugin , blue ocean & ssh agent and git*/
 pipeline {
-    agent any
-    
+    //agent any
+    docker { image '3.10.9-buster' }
     environment {
         PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python37-32;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin"
         }
