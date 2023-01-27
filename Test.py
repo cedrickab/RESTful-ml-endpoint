@@ -6,7 +6,7 @@ Created on Tue Jan 24 16:40:09 2023
 """
 
 import unittest
-import requests
+from flask import request
 import json
 
 class TestClassifyEndpoint(unittest.TestCase):
