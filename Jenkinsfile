@@ -15,7 +15,7 @@ pipeline {
                   
         stage('Testing') {
             steps {
-                bat 'pip install -r requirements.txt'
+                bat 'python -m pip install Flask'
                 bat 'python flask.py'
             }
         }
