@@ -18,7 +18,6 @@ pipeline {
                 bat 'python -m pip install numpy'
                 bat 'python -m pip install pandas'
                 bat 'python -m pip install scikit-learn'
-                bat 'python app.py'
                 bat 'python Test.py'
             }
         }
