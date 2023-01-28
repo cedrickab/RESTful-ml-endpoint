@@ -20,14 +20,14 @@ pipeline {
                 bat 'python -m pip install Flask'
                 bat 'python -m pip install numpy'
                 bat 'python -m pip install pandas'
-                bat 'python -m pip install scikit-learn==0.24.1'
+                bat 'python -m pip install scikit-learn=1.0.2'
                 bat 'python Test.py'
             }
         }
         stage('retrain_model') {
             steps {
                 // bat 'python -m pip install dill'
-                // bat 'python -m pip install -U scikit-learn==0.23.2'
+                bat 'python -m pip install -U scikit-learn==0.24.1'
                 bat 'python retrain.py fashion-mnist-train-2.csv'
             }
         }
