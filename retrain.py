@@ -7,7 +7,7 @@ Created on Fri Jan 27 17:27:21 2023
 
 import argparse
 import pandas as pd
-import joblib
+from joblib import compat
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score
 parser = argparse.ArgumentParser()
 parser.add_argument('dataset_name', type=str, help='Name of the dataset to use for training')
 args = parser.parse_args()
-model = joblib.load("model.pkl")
+model = compat.load("model.pkl", mmap_mode='r')
 
 # Read the dataset
 df = pd.read_csv(args.dataset_name)
