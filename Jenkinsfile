@@ -17,6 +17,7 @@ pipeline {
                   
         stage('Testing') {
             steps {
+                echo 'test'
                 // bat 'python -m pip install Flask'
                 // bat 'python -m pip install numpy'
                 // bat 'python -m pip install pandas'
