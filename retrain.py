@@ -34,5 +34,5 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}')
 
-joblib.dump(model, "model2.pkl")
+joblib.dump(model, "model.pkl")
 
