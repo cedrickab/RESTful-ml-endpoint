@@ -4,7 +4,7 @@ Created on Fri Jan 27 17:27:21 2023
 
 @author: hp
 """
-import dill
+
 import argparse
 import pandas as pd
 import joblib
@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score
 parser = argparse.ArgumentParser()
 parser.add_argument('dataset_name', type=str, help='Name of the dataset to use for training')
 args = parser.parse_args()
-model = dill.load(open("model.pkl", 'rb'))
+model = joblib.load("model.pkl")
 
 # Read the dataset
 df = pd.read_csv(args.dataset_name)
@@ -35,4 +35,3 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}')
 
 joblib.dump(model, "model.pkl")
-
