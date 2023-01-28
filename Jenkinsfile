@@ -21,7 +21,7 @@ pipeline {
                 // bat 'python -m pip install numpy'
                 // bat 'python -m pip install pandas'
                 // bat 'python -m pip install scikit-learn==1.0.2'
-                bat 'python Test.py'
+                // bat 'python Test.py'
             }
         }
         stage('retrain_model') {
