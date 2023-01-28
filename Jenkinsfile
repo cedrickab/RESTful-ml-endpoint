@@ -26,6 +26,7 @@ pipeline {
         }
         stage('retrain_model') {
             steps {
+                bat 'python -m pip install scikit-learn==1.0.2'
                 bat 'python retrain.py fashion-mnist-train-2.csv'
             }
         }
