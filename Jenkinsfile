@@ -5,7 +5,7 @@ pipeline {
     agent any
     
     environment {
-        PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\hp\\anaconda3;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin"
+        PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python37-32;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin"
         }
     
     stages {
@@ -17,12 +17,11 @@ pipeline {
                   
         stage('Testing') {
             steps {
-                echo 'test'
-                // bat 'python -m pip install Flask'
-                // bat 'python -m pip install numpy'
-                // bat 'python -m pip install pandas'
-                // bat 'python -m pip install scikit-learn==1.0.2'
-                // bat 'python Test.py'
+                bat 'python -m pip install Flask'
+                bat 'python -m pip install numpy'
+                bat 'python -m pip install pandas'
+                bat 'python -m pip install scikit-learn==1.0.2'
+                bat 'python Test.py'
             }
         }
         stage('retrain_model') {
