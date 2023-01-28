@@ -4,10 +4,10 @@ Created on Fri Jan 27 17:27:21 2023
 
 @author: hp
 """
-
+import dill
 import argparse
 import pandas as pd
-from joblib import compat
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score
 parser = argparse.ArgumentParser()
 parser.add_argument('dataset_name', type=str, help='Name of the dataset to use for training')
 args = parser.parse_args()
-model = compat.load("model.pkl", mmap_mode='r')
+model = dill.load(open("model.pkl", 'rb'))
 
 # Read the dataset
 df = pd.read_csv(args.dataset_name)
