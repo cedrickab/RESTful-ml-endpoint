@@ -26,7 +26,7 @@ pipeline {
         }
         stage('retrain_model') {
             steps {
-                bat 'retrain.py fashion-mnist-train-2.csv'
+                bat 'python retrain.py fashion-mnist-train-2.csv'
             }
         }
         stage('building and running image') {
