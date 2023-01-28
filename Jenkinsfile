@@ -18,7 +18,10 @@ pipeline {
         stage('Testing') {
             steps {
                 bat 'python -m pip install Flask'
-                bat 'python test_main.py'
+                bat 'python -m pip install numpy'
+                bat 'python -m pip install pandas'
+                bat 'python -m pip install scikit-learn'
+                bat 'python Test.py'
             }
         }
         stage('retrain_model') {
