@@ -53,7 +53,7 @@ pipeline {
                                 //login
                                 bat "docker login -u ${dockerpass_USR} -p ${dockerpass_PSW} "
                                 // build a Docker image
-                                bat 'docker image tag endpointMLOPS cedrickab/endpoint:myfirstimage'
+                                bat 'docker image tag endpointmlops cedrickab/endpoint:myfirstimage'
                                 // run a Docker container from the image
                                 bat 'docker image push cedrickab/endpoint:myfirstimage'
                                 }
