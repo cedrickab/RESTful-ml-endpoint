@@ -66,11 +66,11 @@ pipeline {
                             agent any
                             steps {
                                 sshagent(credentials:['SSH']){
-                                    bat 'git checkout -b staging'
+                                    bat 'git checkout staging'
                                     bat 'git add -A' 
                                     bat 'git commit --allow-empty -am "Merged staging branch into main"'
                                     bat 'git remote set-url origin git@github.com:cedrickab/RESTful-ml-endpoint.git'
-                                    bat 'git checkout main'
+                                    bat 'git checkout -b main'
                                     bat 'git pull'
                                     bat 'git merge origin/staging'
                                     // bat 'git commit -m "hello my commit message'
