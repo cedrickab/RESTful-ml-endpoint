@@ -27,6 +27,7 @@ pipeline {
         stage('retrain_model') {
             steps {
                 // bat 'python -m pip install dill'
+                bat 'python model.py'
                 bat 'python -m pip install -U scikit-learn==0.24.1'
                 bat 'python retrain.py fashion-mnist-train-2.csv'
             }
