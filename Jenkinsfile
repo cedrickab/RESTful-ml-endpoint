@@ -66,7 +66,6 @@ pipeline {
                             agent any
                             steps {
                                 sshagent(credentials:['SSH']){
-
                                     bat 'git checkout staging'
                                     bat 'git add -A' 
                                     bat 'git commit --allow-empty -am "Merged staging branch into main"'
@@ -76,7 +75,6 @@ pipeline {
                                     bat 'git merge origin/staging'
                                     // bat 'git commit -m "hello my commit message'
                                     bat 'git push origin main'
-
                                 }
                         
                                 }
