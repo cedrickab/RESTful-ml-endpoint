@@ -34,9 +34,9 @@ pipeline {
         stage('building and running image') {
             steps {
                 // build a Docker image
-                bat 'docker build -t endpointMLOPS .'
+                bat 'docker build -t endpointmlops .'
                 // run a Docker container from the image
-                bat 'docker run -d endpointMLOPS'
+                bat 'docker run -d endpointmlops'
             }
         }
         stage('dockerhub and git') {
